@@ -1,10 +1,10 @@
 services:
   - type: web
-    name: ghost-cp
+    name: saini-txt-direct
     plan: free
     env: docker
     dockerfilePath: Dockerfile
-    repo: https://github.com/makwanaram/ghost-cp
+    repo: https://github.com/nikhilsainiop/Saini-txt-direct
     branch: main
     autoDeploy: false
     envVars:
