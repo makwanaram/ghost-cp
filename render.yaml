@@ -1,14 +1,12 @@
 services:
   - type: web
-    name: saini-txt-direct
+    name: html-txt-bot
+    env: python
     plan: free
-    env: docker
-    dockerfilePath: Dockerfile
-    repo: https://github.com/nikhilsainiop/Saini-txt-direct
-    branch: main
-    autoDeploy: false
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
     envVars:
-      - key: BOT_TOKEN
+      - key: TOKEN
         sync: false
       - key: API_ID
         sync: false
@@ -18,7 +16,3 @@ services:
         sync: false
       - key: CREDIT
         sync: false
-      #- key: WEBHOOK
-        #sync: false
-      - key: PORT
-        value: 8000  # Default port value, update if needed
